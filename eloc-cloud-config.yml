@@ -29,25 +29,4 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-################################
-#
-# 数据库连接池配置
-#
-################################
-
-spring:
-  druid:
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 300000
-    validationQuery: 'SELECT 1 FROM DUAL'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: false
-    maxPoolPreparedStatementPerConnectionSize: 20
-    filters: stat,wall,log4j
  
