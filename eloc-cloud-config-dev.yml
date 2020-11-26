@@ -1,6 +1,14 @@
-info:
-  profile: dev
+################################
+#
+# ELOC 数据源配置
+#
+################################
 
-name: eloc-cloud-config
-words: eloc cloud
-food: '{cipher}3b9a4a7075d2f2929ae52c37124d7138ff84b11dea96cfd0b80849d74d36fe11'
+eloc:
+  mysql: 
+    url: jdbc:mysql://130.3.3.38:3306/eloc?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true&serverTimezone=GMT%2B8
+    username: eloc
+    password: '{cipher}268e511418ad95400d97d3ceff7e5a5455c0c33b2b859da374bf1aa760b3bad3'
+    
+  redis:
+    password: '{cipher}268e511418ad95400d97d3ceff7e5a5455c0c33b2b859da374bf1aa760b3bad3'
