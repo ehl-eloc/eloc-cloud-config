@@ -25,7 +25,7 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: 'stat,wall,log4j'
   redis:
-    host: 130.3.3.24
+    host: '130.3.3.24'
     port: 6379
     timeout: 5000
     password: '{cipher}0378089c06ead3cd5a36d6025489ed87631c5e6c1084a8b2b41a616472f020c6'
