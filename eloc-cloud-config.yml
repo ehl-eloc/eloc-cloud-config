@@ -12,5 +12,21 @@ management:
   endpoint:
     health:
       show-details: always
-    
-  
+
+################################
+#
+# Mybatis-plus 配置
+#
+################################
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    id-type: 2
+    field-strategy: 2
+    db-column-underline: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ 
