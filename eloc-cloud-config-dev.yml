@@ -3,10 +3,29 @@
 # ELOC 数据源配置
 #
 ################################
-eloc:
-  mysql:
-    url: jdbc:mysql://130.3.3.38:3306/eloc1?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true&serverTimezone=GMT%2B8
+
+spring:
+  datasource:
+    type: 'com.alibaba.druid.pool.DruidDataSource'
+    driverClassName: 'com.mysql.cj.jdbc.Driver'
+    url: 'jdbc:mysql://130.3.3.38:3306/eloc1?useUnicode=true&characterEncoding=UTF8&useSSL=false&autoReconnect=true&serverTimezone=GMT%2B8'
+    username: 'eloc1'
     password: '{cipher}0378089c06ead3cd5a36d6025489ed87631c5e6c1084a8b2b41a616472f020c6'
+  druid:
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 300000
+    validationQuery: 'SELECT 1 FROM DUAL'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: 'stat,wall,log4j'
   redis:
-    host: 130.3.3.24
+    host: '130.3.3.24'
+    port: 6379
+    timeout: 5000
     password: '{cipher}0378089c06ead3cd5a36d6025489ed87631c5e6c1084a8b2b41a616472f020c6'
